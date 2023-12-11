@@ -1,0 +1,9 @@
+.top-rated-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.top-rated-movies-lists {
+  display: flex;
+  flex-wrap: wrap;
+}

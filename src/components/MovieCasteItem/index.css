@@ -1,0 +1,20 @@
+.movie-caste-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  height: 250px;
+  width: 280px;
+  margin: 15px;
+}
+
+.movie-caste-name {
+  font-size: 15px;
+  color: white;
+}
+
+.movie-caste-image {
+  height: 150px;
+  width: 150px;
+  border-radius: 7px;
+}

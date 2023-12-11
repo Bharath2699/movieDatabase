@@ -1,0 +1,9 @@
+.movie-caste-container {
+  height: 100vh;
+  width: 100vw;
+}
+
+.movies-caste-lists {
+  display: flex;
+  flex-wrap: wrap;
+}
