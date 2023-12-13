@@ -1,9 +1,8 @@
 import {Component} from 'react'
 import Loader from 'react-loader-spinner'
-import {HiOutlineSearch} from 'react-icons/hi'
+
 import {Link} from 'react-router-dom'
-import {GiHamburgerMenu} from 'react-icons/gi'
-import {GrFormClose} from 'react-icons/gr'
+
 import MovieCard from '../MovieCard'
 import './index.css'
 
@@ -137,7 +136,7 @@ class SearchedMoviePage extends Component {
                   <ul className="nav-item">
                     <li className="item">
                       <Link to="/" className="text">
-                        Home
+                        Popular
                       </Link>
                     </li>
                     <li className="item">
@@ -163,14 +162,19 @@ class SearchedMoviePage extends Component {
                         value={searchInput}
                       />
 
-                      <HiOutlineSearch
-                        size={25}
-                        onClick={this.onClickSearchIcon}
-                      />
+                      <button type="button" onClick={this.onClickSearchIcon}>
+                        Search
+                      </button>
                     </div>
                   </li>
 
-                  <GiHamburgerMenu size={24} onClick={this.onClickMenu} />
+                  <button
+                    type="button"
+                    className="search-header-view"
+                    onClick={this.onClickMenu}
+                  >
+                    Menu
+                  </button>
                 </ul>
               </div>
             </nav>
@@ -193,7 +197,9 @@ class SearchedMoviePage extends Component {
                     </Link>
                   </li>
 
-                  <GrFormClose size={18} onClick={this.onClickClose} />
+                  <button type="button" onClick={this.onClickClose}>
+                    Close
+                  </button>
                 </ul>
               </div>
             )}

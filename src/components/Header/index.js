@@ -1,8 +1,6 @@
 import {Link} from 'react-router-dom'
 import {useState} from 'react'
-import {HiOutlineSearch} from 'react-icons/hi'
-import {GiHamburgerMenu} from 'react-icons/gi'
-import {GrFormClose} from 'react-icons/gr'
+
 import './index.css'
 
 const Header = () => {
@@ -17,71 +15,74 @@ const Header = () => {
   }
 
   return (
-    <div className="bg-card">
-      <nav className="header-lgContainer">
-        <li className="item">
-          <Link to="/">
-            <h1>movieDB</h1>
-          </Link>
-        </li>
+    <nav className="bg-card">
+      <div className="header-lgContainer">
+        <Link to="/">
+          <h1>movieDB</h1>
+        </Link>
 
         <div className="large-view">
           <div className="home-popular">
             <ul className="nav-item">
-              <h1 className="item">
+              <li className="item">
                 <Link to="/" className="text">
-                  Home
+                  <h1>Popular</h1>
                 </Link>
-              </h1>
-              <h1 className="item">
+              </li>
+              <li className="item">
                 <Link to="/top-rated" className="text">
-                  Top-Rated Movies
+                  <h1>Top Rated</h1>
                 </Link>
-              </h1>
-              <h1 className="item">
+              </li>
+              <li className="item">
                 <Link to="/upcoming" className="text">
-                  Upcoming
+                  <h1>Upcoming</h1>
                 </Link>
-              </h1>
+              </li>
             </ul>
           </div>
           <ul className="nav-item">
             <li className="search-c">
               <Link to="/search">
-                <HiOutlineSearch size={25} />
+                <input type="search" />
               </Link>
+              <button type="button">Search</button>
             </li>
 
             <li className="menu">
-              <GiHamburgerMenu onClick={onClickMenu} fill="#ffffff" size={24} />
+              <button type="button" onClick={onClickMenu}>
+                Menu
+              </button>
             </li>
           </ul>
         </div>
-      </nav>
+      </div>
       {showHeader && (
         <div className="header-view">
           <ul className="mobile-header-view">
-            <h1 className="item">
+            <li className="item">
               <Link to="/" className="text">
-                Home
+                <h1>Popular</h1>
               </Link>
-            </h1>
-            <h1 className="item">
+            </li>
+            <li className="item">
               <Link to="/top-rated" className="text">
-                Top-Rated
+                <h1>Top Rated</h1>
               </Link>
-            </h1>
-            <h1 className="item">
+            </li>
+            <li className="item">
               <Link to="/upcoming" className="text">
-                Upcoming
+                <h1>Upcoming</h1>
               </Link>
-            </h1>
+            </li>
 
-            <GrFormClose size={18} fill="#ffffff" onClick={onClickClose} />
+            <button type="button" onClick={onClickClose}>
+              Close
+            </button>
           </ul>
         </div>
       )}
-    </div>
+    </nav>
   )
 }
 

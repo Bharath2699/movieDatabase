@@ -81,6 +81,8 @@
 .item {
   list-style-type: none;
   margin: 18px;
+  background-color: transparent;
+  border-width: 0px;
 }
 .text {
   color: #ffffff;

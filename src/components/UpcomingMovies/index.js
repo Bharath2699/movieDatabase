@@ -30,6 +30,7 @@ class UpcomingMovies extends Component {
         overview: each.overview,
         posterPath: each.poster_path,
         title: each.title,
+        rating: each.vote_average,
       }))
       this.setState({
         upcomingMoviesList: updatedData,
@@ -66,6 +67,7 @@ class UpcomingMovies extends Component {
     return (
       <div className="upcoming-container">
         <Header />
+        <h1>Upcoming</h1>
         <ul className="upcoming-movies-lists">
           {upcomingMoviesList.map(each => (
             <MovieCard movieCardDetails={each} key={each.id} />

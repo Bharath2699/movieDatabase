@@ -3,7 +3,7 @@ import './index.css'
 
 const MovieCard = props => {
   const {movieCardDetails} = props
-  const {title, posterPath, id} = movieCardDetails
+  const {title, posterPath, rating, id} = movieCardDetails
   return (
     <li className="movie-card-container">
       <img
@@ -13,7 +13,7 @@ const MovieCard = props => {
       />
       <div className="movie-card-details">
         <h1 className="movie-card-name">{title}</h1>
-
+        <p className="movie-card-name">{rating}</p>
         <Link to={`/movie/${id}`} className="movie-link">
           <button type="button" className="view-details-button">
             View Details

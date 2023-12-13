@@ -30,6 +30,7 @@ class PopularMovies extends Component {
         overview: each.overview,
         posterPath: each.poster_path,
         title: each.title,
+        rating: each.vote_average,
       }))
       this.setState({
         popularMoviesList: updatedData,
@@ -66,6 +67,7 @@ class PopularMovies extends Component {
     return (
       <div className="popular-container">
         <Header />
+        <h1>Popular</h1>
         <ul className="popular-movies-lists">
           {popularMoviesList.map(each => (
             <MovieCard movieCardDetails={each} key={each.id} />
