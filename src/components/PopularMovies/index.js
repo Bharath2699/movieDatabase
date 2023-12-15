@@ -66,7 +66,6 @@ class PopularMovies extends Component {
 
     return (
       <div className="popular-container">
-        <Header />
         <h1>Popular</h1>
         <ul className="popular-movies-lists">
           {popularMoviesList.map(each => (
@@ -92,7 +91,12 @@ class PopularMovies extends Component {
   }
 
   render() {
-    return <>{this.renderPopularFinalMovies()}</>
+    return (
+      <>
+        <Header />
+        {this.renderPopularFinalMovies()}
+      </>
+    )
   }
 }
 
